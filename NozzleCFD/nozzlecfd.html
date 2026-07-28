@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project – Emory Hill</title>
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="../main.css">
+
+  <!-- Project page styles -->
+  <link rel="stylesheet" href="nozzlecfd2.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../resume/resume.html">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="project-page">
+
+    <h1 class="project-title">CFD NOZZLE FLOW OPTIMIZATION</h1>
+    <div class="project-title-underline"></div>
+
+    <div class="two-column-page">
+
+      <!-- LEFT COLUMN: TEXT -->
+      <div class="left-column">
+        <div class="text-section">
+
+          <p class="hero-description">
+              <p class="hero-description">
+              This project <strong>models the 3D flight dynamics</strong> of a spinning
+              ping‑pong ball by solving its full translational motion under
+              <strong>aerodynamic drag</strong> and the <strong>Magnus effect</strong>. I used MATLAB’s
+              ODE framework to set up the governing equations, and the simulation
+              <strong>integrates gravity, velocity‑dependent drag, and spin‑induced lift</strong>
+              to produce a trajectory that curves, dips, and arcs the way a real
+              ball does. The force model combines <strong>gravity</strong>, <strong>quadratic drag</strong>,
+              and <strong>spin‑generated lift</strong> through a cross‑product Magnus formulation.
+              </p>
+
+              <p class="hero-description">
+              For each run, I defined the initial <strong>position</strong>, <strong>velocity</strong>,
+              and <strong>spin rate</strong>, and MATLAB’s <strong>ode45</strong> solver <strong>carries the
+              motion forward</strong> in time. The simulation <strong>generates</strong> a full set of
+              <strong>3D trajectory plots</strong>, <strong>axis‑aligned projections</strong>, and a
+              <strong>table‑height collision mask</strong> that ends the path once the ball
+              reaches the playing surface. A rendered <strong>ping‑pong table model</strong>
+              provides spatial context so the curved flight path can be viewed
+              inside realistic court dimensions.
+              </p>
+
+              <p class="hero-description">
+              By adjusting spin and velocity inputs, the model <strong>shows</strong> how
+              <strong>lift coefficients</strong>, <strong>drag coefficients</strong>, and <strong>angular
+              velocity</strong> influence curvature and descent. It becomes a compact
+              study in <strong>aerodynamics</strong>, <strong>numerical integration</strong>, and
+              <strong>physics‑based modeling</strong>, capable of replicating topspin,
+              backspin, sidespin, and mixed spin profiles to illustrate how each
+              one affects real‑world trajectories.
+              </p>
+
+              <p class="hero-description">
+              I structured the workflow so additional physical effects can be
+              added without changing the overall pipeline. The model <strong>supports</strong>
+              extensions like <strong>Reynolds‑dependent drag</strong>, <strong>spin‑rate decay</strong>,
+              and <strong>contact dynamics</strong> to increase realism and broaden the range
+              of behaviors it can capture.
+              </p>
+
+            </p>
+
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: IMAGES -->
+      <div class="right-column">
+        <div class="image-section">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 1">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 2">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 3">
+        </div>
+      </div>
+
+    </div>
+
+</main>
+
+    <!-- REPORT SECTION WRAPPER -->
+    <div class="report-wrapper">
+
+    <div class="report-header">
+        <h2 class="report-title">Final Project Report</h2>
+        <div class="report-button-group">
+          <a href="#" class="button-secondary report-download-btn">
+          View in Github
+          </a>
+
+          <a href="Final_Nozzle_CFD_Report.pdf" 
+          class="button-primary report-download-btn"
+          download>
+          Download PDF
+          </a>
+        </div>
+    </div>
+
+    <iframe 
+        src="Final_Nozzle_CFD_Report.pdf"
+        class="report-frame"
+        title="Nozzle CFD Report PDF">
+    </iframe>
+
+    </div>
+
+
+ 
+
+</body>
+</html>

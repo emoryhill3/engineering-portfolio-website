@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project – Emory Hill</title>
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="../main.css">
+
+  <!-- Project page styles -->
+  <link rel="stylesheet" href="quadcoptsim.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../resume/resume.html">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="project-page">
+
+    <h1 class="project-title">MATLAB QUADCOPTER SIMULATION</h1>
+    <div class="project-title-underline"></div>
+
+    <div class="two-column-page">
+
+      <!-- LEFT COLUMN: TEXT -->
+      <div class="left-column">
+        <div class="text-section">
+
+          <p class="hero-description">
+            This project models the <strong>full 3D nonlinear dynamics</strong> of a quadcopter by integrating its complete
+            <strong>12‑state equations of motion</strong> in MATLAB. Working as part of a three‑person team, I led the
+            <strong>MATLAB dynamics and simulation development</strong>, building the core model around realistic physical
+            parameters—total mass, center of mass, and a full <strong>inertia tensor</strong> assembled from each component.
+            Using MATLAB’s <strong>ODE45</strong> solver, the system couples translational motion, rotational motion, and
+            body‑frame orientation to capture how the quadcopter accelerates, tilts, and stabilizes in
+            three‑dimensional space.
+            </p>
+
+            <p class="hero-description">
+            Thrust and moment control are modeled directly from the rotor layout. Each motor contributes to
+            <strong>total thrust</strong>, <strong>pitch and roll moments</strong>, and <strong>yaw torque</strong> through differential rotor speeds,
+            giving the quadcopter realistic control authority in all three axes. Drag forces act in the body frame
+            and depend on the vehicle’s orientation, producing nonlinear behaviors like tilt‑induced drift and
+            asymmetric acceleration. All of these effects feed into the equations of motion, creating a tightly
+            coupled system that reflects the true physics of multirotor flight.
+            </p>
+
+            <p class="hero-description">
+            To validate the model, I ran several steady‑state cases: pure <strong>vertical ascent</strong>, <strong>horizontal flight</strong>
+            driven by roll angle, and a second horizontal case driven by <strong>pitch angle</strong>. In each scenario, the
+            quadcopter naturally settled into the expected steady‑state velocities, matching analytical predictions
+            and confirming that the force and moment balance was implemented correctly. These cases also
+            highlighted how differences in aerodynamic coefficients along the body axes affect maximum
+            horizontal speed, which emerged directly from the physics rather than being imposed.
+            </p>
+
+            <p class="hero-description">
+            As a final test, I simulated a <strong>helical trajectory</strong> defined by parametric equations in the inertial frame,
+            with the quadcopter’s yaw angle continuously rotating to face the direction of motion. This required
+            solving for the equilibrium thrust and orientation angles that keep the vehicle on the helix while
+            maintaining stable rotation. Watching the quadcopter trace the helix—complete with correct
+            orientation behavior—was a strong confirmation that the model’s <strong>twelve coupled first‑order
+            equations</strong> were working together the way they should.
+            </p>
+
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: IMAGES -->
+      <div class="right-column">
+        <div class="image-section">
+          <img src="helix.png" alt="Project image 1">
+        </div>
+      </div>
+
+    </div>
+
+</main>
+
+    <!-- REPORT SECTION WRAPPER -->
+    <div class="report-wrapper">
+
+    <div class="report-header">
+        <h2 class="report-title">Final Project Report</h2>
+        <div class="report-button-group">
+
+        <!-- UPDATED: first button now goes to your GitHub link -->
+        <a href="https://github.com/emoryhill3/3D-Quadcopter-Simulation"
+            class="button-secondary report-download-btn">
+            View in Github
+        </a>
+
+        <a href="Quadcopter 3D Simulation Report.pdf" 
+            class="button-primary report-download-btn"
+            download>
+            Download PDF
+        </a>
+
+        </div>
+    </div>
+
+    <iframe 
+        src="Quadcopter 3D Simulation Report.pdf"
+        class="report-frame"
+        title="Quadcopter 3D Simulation Report PDF">
+    </iframe>
+
+    </div>
+
+
+ 
+
+</body>
+</html>

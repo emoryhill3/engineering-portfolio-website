@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project – Emory Hill</title>
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="../main.css">
+
+  <!-- Project page styles -->
+  <link rel="stylesheet" href="pingpong.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../resume/resume.html">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="project-page">
+
+    <h1 class="project-title">PING PONG PATH PREDICTOR</h1>
+    <div class="project-title-underline"></div>
+
+    <div class="two-column-page">
+
+      <!-- LEFT COLUMN: TEXT -->
+      <div class="left-column">
+        <div class="text-section">
+
+            <p class="hero-description">
+            This project models the <strong>3D flight dynamics</strong> of a spinning ping‑pong ball by solving its full
+            translational motion under <strong>aerodynamic drag</strong> and the <strong>Magnus effect</strong>. Using MATLAB’s ODE
+            framework, the simulation integrates gravity, velocity‑dependent drag, and spin‑induced lift to
+            produce a physically accurate trajectory that reflects how real balls curve, dip, and arc in flight.
+            The governing equations combine <strong>gravity</strong>, <strong>quadratic drag</strong>, and <strong>spin‑generated lift</strong> through a
+            cross‑product formulation of the Magnus force.
+            </p>
+
+            <p class="hero-description">
+            Initial conditions for <strong>position</strong>, <strong>velocity</strong>, and <strong>spin rate</strong> define the starting state of the
+            ball, and MATLAB’s <strong>ode45</strong> solver integrates the motion over time. The simulation outputs
+            a full set of <strong>3D trajectory plots</strong>, <strong>axis‑aligned projections</strong>, and a <strong>table‑height collision
+            mask</strong> that terminates the path once the ball reaches the playing surface. A rendered
+            <strong>ping‑pong table model</strong> provides spatial context, allowing the curved flight path to be viewed
+            relative to realistic court dimensions.
+            </p>
+
+            <p class="hero-description">
+            By adjusting spin and velocity inputs, the simulation demonstrates how <strong>lift coefficients</strong>,
+            <strong>drag coefficients</strong>, and <strong>angular velocity</strong> influence the ball’s curvature and descent. This
+            makes the project a compact study in <strong>aerodynamics</strong>, <strong>numerical integration</strong>, and
+            <strong>physics‑based modeling</strong>. The resulting tool can replicate topspin, backspin, sidespin, and
+            combined spin profiles to show how each affects real‑world trajectories.
+            </p>
+
+            <p class="hero-description">
+            The model is structured so additional physical effects can be incorporated without changing the
+            overall workflow. Future extensions may include <strong>Reynolds‑dependent drag behavior</strong>,
+            <strong>spin‑rate decay</strong>, and <strong>contact dynamics</strong> to increase realism and expand the range of
+            trajectory behaviors that can be simulated.
+            </p>
+
+            <!-- GitHub Button -->
+            <div class="report-button-group" style="margin-top: 40px;">
+            <a href="https://github.com/emoryhill3/Ping-Pong-Path-Predictor"
+                class="button-primary github-button">
+                View in Github
+                </a>
+
+            </div>
+
+        </div>
+     </div>
+
+
+      <!-- RIGHT COLUMN: IMAGES -->
+      <div class="right-column">
+        <div class="image-section">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 1">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 2">
+          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 3">
+        </div>
+      </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>

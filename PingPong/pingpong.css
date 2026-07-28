@@ -1,0 +1,125 @@
+/* ===========================
+   PAGE WRAPPER
+=========================== */
+
+.project-page {
+  background-color: var(--bg-black);
+  padding: 90px 10% 90px;
+  color: var(--white);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* ===========================
+   TITLE + UNDERLINE
+=========================== */
+
+.project-title {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--white);
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.project-title-underline {
+  width: 835px;
+  height: 5px;
+  background-color: var(--highlight);
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+/* ===========================
+   TWO-COLUMN LAYOUT
+=========================== */
+
+.two-column-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+
+/* ===========================
+   TEXT SECTION (hero style)
+=========================== */
+
+.text-section .hero-description {
+  font-size: 22px;
+  color: var(--text-gray);
+  font-weight: 200;
+  max-width: 600px;
+  margin-bottom: 0px;
+  text-indent: 40px;
+}
+
+.text-section .hero-description strong {
+  color: var(--offwhite);
+  font-weight: 400;
+}
+
+/* ===========================
+   IMAGE SECTION
+=========================== */
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===========================
+   GITHUB BUTTON
+=========================== */
+
+.github-button-wrapper {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.github-button {
+  font-size: 20px;
+  padding: 14px 28px;
+  border-radius: 0px; /* match your primary button */
+  display: inline-block;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+  .project-title {
+    font-size: 36px;
+  }
+
+  .two-column-page {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+  }
+}
