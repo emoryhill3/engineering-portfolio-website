@@ -730,8 +730,16 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* LEFT SIDE */
+/* LEFT COLUMN */
 .contact-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* RIGHT COLUMN */
+.contact-right {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -740,97 +748,26 @@ nav a:hover::after {
 
 /* Contact info boxes */
 .contact-box {
-  background-color: #0b0b0b; /* deeper black to match your aesthetic */
+  background-color: var(--bg-secondary);
   padding: 16px 20px;
   border-radius: 0px;
-  border: 1.5px solid var(--highlight-opaque); /* your dim blue */
-  background-color:var(--bg-secondary);
+  border: 1.5px solid var(--highlight-opaque);
 }
 
-/* Smaller label text */
+/* Label text */
 .contact-label {
   font-size: 16px;
   color: rgba(255,255,255,0.55);
   font-family: "Oswald", sans-serif;
 }
 
-/* Smaller value text */
+/* Value text */
 .contact-value {
   margin-top: 4px;
   font-size: 19px;
   color: var(--white);
   font-family: "Oswald", sans-serif;
 }
-
-/* RIGHT SIDE FORM */
-.contact-right {
-  width: 50%;
-  margin-top: -5px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Labels */
-.form-label {
-  font-size: 15px;
-  margin-bottom: 4px;
-  color: rgba(255,255,255,0.55);
-  font-family: "Oswald", sans-serif;
-}
-
-/* Inputs + textarea */
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--highlight-opaque);
-  border-radius: 0px;
-  color: var(--white);
-  font-size: 15px;
-  font-family: "Oswald", sans-serif;
-}
-
-.form-textarea {
-  height: 120px;
-  resize: none;
-}
-
-/* Submit button — updated to your blue accent */
-.form-submit {
-  margin-top: 10px;
-  padding: 12px 18px;
-  background-color: var(--highlight);
-  color: black;
-  font-family: "Oswald", sans-serif;
-  font-size: 18px;
-
-  /* border always exists — no size change on hover */
-  border: 2px solid transparent;
-
-  border-radius: 0px;
-  cursor: pointer;
-
-  /* smooth glow transition */
-  transition: background-color 0.25s ease,
-              box-shadow 0.25s ease,
-              border-color 0.25s ease;
-}
-
-.form-submit:hover {
-  background-color: var(--highlight-hover);
-
-  /* glow only — no resizing */
-  box-shadow: 0 0 12px var(--highlight-glow);
-
-  /* border lights up but stays same thickness */
-  border-color: var(--highlight-hover);
-}
-
 
 /* Footer */
 .site-footer {
