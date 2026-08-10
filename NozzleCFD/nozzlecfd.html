@@ -46,45 +46,49 @@
 
           <p class="hero-description">
               <p class="hero-description">
-              This project <strong>models the 3D flight dynamics</strong> of a spinning
-              ping‑pong ball by solving its full translational motion under
-              <strong>aerodynamic drag</strong> and the <strong>Magnus effect</strong>. I used MATLAB’s
-              ODE framework to set up the governing equations, and the simulation
-              <strong>integrates gravity, velocity‑dependent drag, and spin‑induced lift</strong>
-              to produce a trajectory that curves, dips, and arcs the way a real
-              ball does. The force model combines <strong>gravity</strong>, <strong>quadratic drag</strong>,
-              and <strong>spin‑generated lift</strong> through a cross‑product Magnus formulation.
+              This project analyzed <strong>compressible nozzle flow</strong> through a set of <strong>conical and 
+              bell (Rao) geometries</strong> as a self‑led effort to demonstrate my <strong>CFD </strong>abilities and 
+              build deeper experience with ANSYS tools. I designed <strong>six</strong> nozzle geometries, each 
+              sized for <strong>ideal expansion</strong> at one of <strong>three</strong> ambient pressures, and then tested all 
+              of them across every operating condition to study how contour shape, expansion 
+              ratio, and shock behavior influenced overall performance. The workflow used 
+              <strong>ANSYS SpaceClaim</strong> for geometry creation, <strong>ANSYS Meshing</strong> for mesh generation, 
+              and <strong>ANSYS Fluent</strong> for the simulations.
               </p>
 
               <p class="hero-description">
-              For each run, I defined the initial <strong>position</strong>, <strong>velocity</strong>,
-              and <strong>spin rate</strong>, and MATLAB’s <strong>ode45</strong> solver <strong>carries the
-              motion forward</strong> in time. The simulation <strong>generates</strong> a full set of
-              <strong>3D trajectory plots</strong>, <strong>axis‑aligned projections</strong>, and a
-              <strong>table‑height collision mask</strong> that ends the path once the ball
-              reaches the playing surface. A rendered <strong>ping‑pong table model</strong>
-              provides spatial context so the curved flight path can be viewed
-              inside realistic court dimensions.
+              For each nozzle and ambient condition, I documented solver settings, boundary 
+              conditions, and the chosen turbulence model, then extracted <strong>Mach number 
+              contours</strong>, <strong>pressure and temperature fields</strong>, <strong>shock structure visualization</strong>, 
+              mass flow rate, exit conditions, and thrust. Fluent output was processed in 
+              <strong>MATLAB</strong>, where automated scripts generated contour plots, comparison tables, 
+              and performance curves. This enabled structured comparisons between 
+              <strong>expansion ratios</strong> and between conical and bell contours under identical 
+              operating conditions.
               </p>
 
               <p class="hero-description">
-              By adjusting spin and velocity inputs, the model <strong>shows</strong> how
-              <strong>lift coefficients</strong>, <strong>drag coefficients</strong>, and <strong>angular
-              velocity</strong> influence curvature and descent. It becomes a compact
-              study in <strong>aerodynamics</strong>, <strong>numerical integration</strong>, and
-              <strong>physics‑based modeling</strong>, capable of replicating topspin,
-              backspin, sidespin, and mixed spin profiles to illustrate how each
-              one affects real‑world trajectories.
+              By varying ambient pressure and nozzle shape, the study showed how geometry 
+              affected <strong>shock location</strong>, exit pressure, mass flow rate, and thrust. The CFD 
+              results were validated against <strong>isentropic theory</strong> using the <strong>area–Mach 
+              relation</strong>, choked mass flow, and ideal exit conditions, followed by a comparison 
+              of computed thrust to ideal predictions and a discussion of viscous losses, 
+              shock‑induced separation, and other non‑ideal effects. The project serves as a 
+              focused study in compressible flow, numerical modeling, and practical nozzle 
+              design.
               </p>
 
               <p class="hero-description">
-              I structured the workflow so additional physical effects can be
-              added without changing the overall pipeline. The model <strong>supports</strong>
-              extensions like <strong>Reynolds‑dependent drag</strong>, <strong>spin‑rate decay</strong>,
-              and <strong>contact dynamics</strong> to increase realism and broaden the range
-              of behaviors it can capture.
+              The final goal is to produce <strong>three optimized nozzle geometries</strong>, each refined 
+              after reviewing CFD results and accounting for <strong>boundary layer growth</strong>, 
+              <strong>flow separation</strong>, <strong>shock placement</strong>, <strong>over‑ and under‑expansion</strong>, 
+              <strong>pressure recovery</strong>, and <strong>loss mechanisms</strong>. These optimizations targeted 
+              improved <strong>thrust</strong>, <strong>efficiency</strong>, and overall flow quality for each ambient 
+              condition. The project is currently <strong>ongoing</strong>, and the full technical report—
+              including background, methodology, geometry definitions, mesh independence, CFD 
+              setup, results, validation, comparative analysis, and conclusions—will be 
+              uploaded to this page once completed.
               </p>
-
             </p>
 
         </div>
