@@ -1,0 +1,129 @@
+/* ===========================
+   RESUME PAGE WRAPPER
+=========================== */
+
+.resume-page {
+  background-color: var(--bg-black);
+  padding: 90px 10% 90px;
+  color: var(--white);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers title + content */
+  text-align: center;    /* centers text inside */
+}
+
+
+/* ===========================
+   TITLE + UNDERLINE
+=========================== */
+
+.resume-title {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--white);
+  margin-left: 0; /* matches your section titles */
+  margin-bottom: 10px;
+}
+
+.resume-title-underline {
+  width: 140px;
+  height: 5px;
+  background-color: var(--highlight);
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.resume-download {
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+.resume-download .button-primary {
+  font-size: 20px;
+  padding: 14px 28px;
+}
+
+/* Uses your existing .button-primary from main.css */
+/* No new styling needed */
+
+/* ===========================
+   RESUME CONTENT BLOCK
+=========================== */
+
+.resume-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--highlight-opaque);
+  padding: 40px 50px;
+  border-radius: 0px;
+
+  width: 100%;
+  max-width: 1200px;     /* bigger box */
+  height: auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.45);
+}
+
+.resume-frame {
+  width: 100%;
+  height: 1400px;        /* much taller */
+  border: none;
+}
+
+
+/* ===========================
+   TEXT STYLING
+=========================== */
+
+.resume-content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--offwhite);
+  margin-bottom: 12px;
+}
+
+.resume-content h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--highlight);
+  margin-bottom: 8px;
+}
+
+.resume-content p,
+.resume-content li {
+  font-size: 18px;
+  color: var(--text-gray);
+  font-weight: 300;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.resume-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .resume-content {
+    padding: 30px 25px;
+  }
+
+  .resume-title {
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .resume-title-underline,
+  .resume-download,
+  .resume-content {
+    margin-left: 0;
+  }
+}
