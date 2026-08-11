@@ -48,39 +48,62 @@
           <p class="hero-description">
             This project models the <strong>full 3D nonlinear dynamics</strong> of a quadcopter by integrating its complete
             <strong>12‑state equations of motion</strong> in MATLAB. Working as part of a three‑person team, I led the
-            <strong>MATLAB dynamics and simulation development</strong>, building the core model around realistic physical
+            <strong>MATLAB dynamics and simulation development</strong>, constructing the core model around detailed physical
             parameters—total mass, center of mass, and a full <strong>inertia tensor</strong> assembled from each component.
-            Using MATLAB’s <strong>ODE45</strong> solver, the system couples translational motion, rotational motion, and
-            body‑frame orientation to capture how the quadcopter accelerates, tilts, and stabilizes in
-            three‑dimensional space.
-            </p>
+          </p>
 
-            <p class="hero-description">
+          <p class="hero-description">
+            The quadcopter was reduced to simple geometric primitives (cuboid body, cylindrical rods and motors,
+            spherical payload), allowing us to compute mass properties exactly. From this, the vehicle’s <strong>total mass
+            of 1 kg</strong> and its <strong>center of mass at [0, 0, –0.5]</strong> in the body frame were determined, along with a
+            symmetric inertia matrix derived from the contributions of all components. Using MATLAB’s <strong>ODE45</strong>
+            solver, the system couples translational motion, rotational motion, and body‑frame orientation to capture
+            how the quadcopter accelerates, tilts, and stabilizes in three‑dimensional space.
+          </p>
+
+          <p class="hero-description">
             Thrust and moment control are modeled directly from the rotor layout. Each motor contributes to
             <strong>total thrust</strong>, <strong>pitch and roll moments</strong>, and <strong>yaw torque</strong> through differential rotor speeds,
-            giving the quadcopter realistic control authority in all three axes. Drag forces act in the body frame
-            and depend on the vehicle’s orientation, producing nonlinear behaviors like tilt‑induced drift and
-            asymmetric acceleration. All of these effects feed into the equations of motion, creating a tightly
-            coupled system that reflects the true physics of multirotor flight.
-            </p>
+            giving the quadcopter realistic control authority in all three axes. These expressions include the full
+            thrust–moment relationships used in the report, such as the yaw moment
+            <strong>M₃ = Cₜ (T₁ − T₂ − T₃ + T₄)</strong>, which governs rotational behavior about the vertical axis.
+          </p>
 
-            <p class="hero-description">
-            To validate the model, I ran several steady‑state cases: pure <strong>vertical ascent</strong>, <strong>horizontal flight</strong>
-            driven by roll angle, and a second horizontal case driven by <strong>pitch angle</strong>. In each scenario, the
-            quadcopter naturally settled into the expected steady‑state velocities, matching analytical predictions
-            and confirming that the force and moment balance was implemented correctly. These cases also
-            highlighted how differences in aerodynamic coefficients along the body axes affect maximum
-            horizontal speed, which emerged directly from the physics rather than being imposed.
-            </p>
+          <p class="hero-description">
+            Body‑frame drag forces—dependent on orientation—introduce nonlinear effects such as tilt‑induced drift,
+            asymmetric acceleration, and different horizontal performance depending on whether roll or pitch produces
+            the motion. All of these forces feed into the equations of motion, forming a tightly coupled system that
+            reflects the true physics of multirotor flight.
+          </p>
 
-            <p class="hero-description">
-            As a final test, I simulated a <strong>helical trajectory</strong> defined by parametric equations in the inertial frame,
-            with the quadcopter’s yaw angle continuously rotating to face the direction of motion. This required
-            solving for the equilibrium thrust and orientation angles that keep the vehicle on the helix while
-            maintaining stable rotation. Watching the quadcopter trace the helix—complete with correct
-            orientation behavior—was a strong confirmation that the model’s <strong>twelve coupled first‑order
-            equations</strong> were working together the way they should.
-            </p>
+          <p class="hero-description">
+            To validate the model, I ran several steady‑state cases that matched earlier analytical predictions from our
+            2‑D projects. With all orientation angles set to zero, the quadcopter reached a vertical steady‑state velocity
+            of <strong>47.095 m/s</strong>, exactly matching the previous 2‑D maximum. Under a roll angle of <strong>26.891°</strong>, the
+            quadcopter settled into horizontal flight with a maximum velocity of <strong>73.6 m/s</strong>.
+          </p>
+
+          <p class="hero-description">
+            A similar case using a pitch angle of <strong>22.384°</strong> produced a horizontal steady‑state velocity of
+            <strong>64.3 m/s</strong>, demonstrating how differences in aerodynamic coefficients <strong>Aₓ</strong> and <strong>Aᵧ</strong> directly influence
+            performance. These validation cases confirmed that the force and moment balance was implemented
+            correctly and that the 3‑D model reproduced expected behavior across multiple flight regimes.
+          </p>
+
+          <p class="hero-description">
+            As a final demonstration, I simulated a <strong>helical trajectory</strong> defined by parametric equations in the inertial
+            frame, with the quadcopter’s yaw angle continuously rotating to face the direction of motion. Achieving
+            this motion required solving for equilibrium thrust and orientation angles using the full force‑balance
+            equations.
+          </p>
+
+          <p class="hero-description">
+            The trim solution produced <strong>T = 9.86 N</strong>, <strong>φ = –0.102 rad</strong>, and <strong>θ = 3.311×10⁻⁵ rad</strong>, values that
+            remained constant throughout the helical climb while yaw increased linearly. Watching the quadcopter
+            trace the helix—complete with correct orientation behavior—was a strong confirmation that the model’s
+            <strong>twelve coupled first‑order equations</strong> were functioning cohesively and accurately representing 3‑D
+            rigid‑body flight.
+          </p>
 
         </div>
       </div>
@@ -88,7 +111,44 @@
       <!-- RIGHT COLUMN: IMAGES -->
       <div class="right-column">
         <div class="image-section">
-          <img src="helix.png" alt="Project image 1">
+
+          <img src="model.png" alt="">
+          <div class="image-grid-caption">
+            <em>The quadcopter is reduced to basic geometric primitives to compute mass, center of mass, and inertia exactly.</em>
+          </div>
+
+          <img src="process.png" alt="">
+          <div class="image-grid-caption">
+            <em>Above is the dynamics & controls framework behind the simulation.</em>
+          </div>
+
+          <img src="simworkflow.png" alt="">
+          <div class="image-grid-caption">
+            <em>This is the simulation workflow- how we actually use what we know to find what we want.</em>
+          </div>
+
+          <!-- First 6 images in a 2x3 grid -->
+          <div class="image-grid">
+            <img src="vertcase.png" alt="">
+            <img src="roll.png" alt="">
+            <img src="pitch.png" alt="">
+          </div>
+
+          <div class="image-grid">
+            <img src="vertical.png" alt="">
+            <img src="steady1.png" alt="">
+            <img src="steady2.png" alt="">
+          </div>
+
+          <div class="image-grid-caption">
+            <em>These are the three validation cases for the simulation- vertical, roll horizontal, and pitch horizontal.</em>
+          </div>
+
+          <img src="helix.png" alt="">
+          <div class="image-grid-caption">
+            <em>This is the final helical trajectory traced by the quadcopter.</em>
+          </div>
+
         </div>
       </div>
 
