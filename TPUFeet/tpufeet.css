@@ -75,28 +75,66 @@
    IMAGE SECTION
 =========================== */
 
-/* Two small images side-by-side */
-.image-row {
-  display: flex;
-  justify-content: space-between;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
   gap: 20px;
-  margin-bottom: 20px;   /* adds gap above the large image */
 }
 
-.image-row img {
-  width: 48%;
-  border-radius: 6px;
+.image-grid img {
+  width: 100%;
+  border-radius: 4px;
   object-fit: cover;
 }
 
-/* Large image below */
-.large-image {
-  width: 100%;           /* full column width */
-  max-width: none;       /* remove width cap so it matches the column */
-  border-radius: 6px;
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  gap: 20px;
+}
+
+.image-grid2 img {
+  width: 100%;
+  border-radius: 4px;
   object-fit: cover;
 }
 
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.image-grid-caption {
+  width: 100%;                /* matches grid width */
+  text-align: center;         /* centers the text */
+  font-size: 18px;            /* consistent with your subtext scale */
+  color: var(--text-gray);    /* matches your hero-description color */
+  font-weight: 200;           /* same weight as your light text */
+  margin-top: -10px;           /* tight spacing under the grid */
+  margin-bottom: 10px;        /* breathing room before next images */
+}
+/* ===========================
+   GITHUB BUTTON
+=========================== */
+
+.github-button-wrapper {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.github-button {
+  font-size: 20px;
+  padding: 14px 28px;
+  border-radius: 0px; /* match your primary button */
+  display: inline-block;
+}
 
 
 /* ===========================

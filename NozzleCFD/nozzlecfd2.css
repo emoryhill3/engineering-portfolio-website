@@ -74,6 +74,30 @@
 /* ===========================
    IMAGE SECTION
 =========================== */
+/* Grid for first 6 images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 images per row */
+  gap: 20px;
+}
+
+.image-grid2 img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
 
 .image-section {
   display: flex;
@@ -87,14 +111,26 @@
   object-fit: cover;
 }
 
+.image-grid-caption {
+  width: 100%;                /* matches grid width */
+  text-align: center;         /* centers the text */
+  font-size: 18px;            /* consistent with your subtext scale */
+  color: var(--text-gray);    /* matches your hero-description color */
+  font-weight: 200;           /* same weight as your light text */
+  margin-top: -10px;           /* tight spacing under the grid */
+  margin-bottom: 10px;        /* breathing room before next images */
+}
+
+
+/* ===========================
+   REPORT VIEWER SECTION
+=========================== */
+
 .report-button-group {
   display: flex;
   gap: 12px; /* adjust if you want them even closer */
 }
 
-/* ===========================
-   REPORT VIEWER SECTION
-=========================== */
 .report-wrapper {
   width: 100%;
   background-color: var(--bg-secondary); /* your lighter blueish color */
