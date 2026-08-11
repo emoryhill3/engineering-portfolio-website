@@ -46,37 +46,54 @@
         <div class="text-section">
 
             <p class="hero-description">
-            This project models the <strong>3D flight dynamics</strong> of a spinning ping‑pong ball by solving its full
-            translational motion under <strong>aerodynamic drag</strong> and the <strong>Magnus effect</strong>. Using MATLAB’s ODE
-            framework, the simulation integrates gravity, velocity‑dependent drag, and spin‑induced lift to
-            produce a physically accurate trajectory that reflects how real balls curve, dip, and arc in flight.
-            The governing equations combine <strong>gravity</strong>, <strong>quadratic drag</strong>, and <strong>spin‑generated lift</strong> through a
-            cross‑product formulation of the Magnus force.
+              This project models the <strong>3D flight dynamics</strong> of a spinning ping‑pong ball by 
+              integrating its translational motion under <strong>aerodynamic drag</strong> and the 
+              <strong>Magnus effect</strong>. Working in a three‑person team, I led the 
+              <strong>MATLAB dynamics and simulation development</strong>, building the core model 
+              around the ball’s physical parameters and the aerodynamic forces that shape its motion.
             </p>
 
             <p class="hero-description">
-            Initial conditions for <strong>position</strong>, <strong>velocity</strong>, and <strong>spin rate</strong> define the starting state of the
-            ball, and MATLAB’s <strong>ode45</strong> solver integrates the motion over time. The simulation outputs
-            a full set of <strong>3D trajectory plots</strong>, <strong>axis‑aligned projections</strong>, and a <strong>table‑height collision
-            mask</strong> that terminates the path once the ball reaches the playing surface. A rendered
-            <strong>ping‑pong table model</strong> provides spatial context, allowing the curved flight path to be viewed
-            relative to realistic court dimensions.
+              Using MATLAB’s ODE framework, I simulated the ball’s trajectory under gravity, drag, 
+              and spin‑induced lift, producing realistic motion that captures how real table‑tennis 
+              shots dip, float, or curve in flight. Because a sphere has identical moments of inertia 
+              about all axes, its <strong>rotational velocity remains constant</strong>, allowing the model to 
+              focus entirely on translational dynamics.
             </p>
 
             <p class="hero-description">
-            By adjusting spin and velocity inputs, the simulation demonstrates how <strong>lift coefficients</strong>,
-            <strong>drag coefficients</strong>, and <strong>angular velocity</strong> influence the ball’s curvature and descent. This
-            makes the project a compact study in <strong>aerodynamics</strong>, <strong>numerical integration</strong>, and
-            <strong>physics‑based modeling</strong>. The resulting tool can replicate topspin, backspin, sidespin, and
-            combined spin profiles to show how each affects real‑world trajectories.
+              Initial conditions for <strong>position</strong>, <strong>velocity</strong>, and <strong>spin rate</strong> define each trial, and 
+              MATLAB’s <strong>ode45</strong> solver integrates the motion forward in time. The simulation 
+              outputs <strong>3D trajectories</strong>, <strong>axis‑aligned component plots</strong>, and a 
+              <strong>table‑height collision mask</strong> that removes all data below the playing surface, 
+              paired with a rendered <strong>table‑tennis court model</strong> for spatial context.
             </p>
 
             <p class="hero-description">
-            The model is structured so additional physical effects can be incorporated without changing the
-            overall workflow. Future extensions may include <strong>Reynolds‑dependent drag behavior</strong>,
-            <strong>spin‑rate decay</strong>, and <strong>contact dynamics</strong> to increase realism and expand the range of
-            trajectory behaviors that can be simulated.
+              The aerodynamic model incorporates both <strong>drag</strong> and <strong>Magnus lift</strong>. Drag 
+              opposes the direction of motion, while Magnus lift acts perpendicular to both the ball’s 
+              velocity and its spin. Together, these forces create the characteristic dipping, floating, 
+              and curving behavior seen in real table‑tennis shots.
             </p>
+
+            <p class="hero-description">
+              By adjusting the angular velocity vector, I reproduced the major spin profiles used in 
+              table tennis. <strong>No‑spin</strong> shots fall predictably under gravity. <strong>Topspin</strong> drives the 
+              ball downward more aggressively, while <strong>backspin</strong> allows it to stay aloft longer. 
+              <strong>Sidespin</strong> introduces lateral curvature, and combined‑spin cases demonstrate the 
+              deceptive arcs players use in competitive matches.
+            </p>
+
+            <p class="hero-description">
+              The framework is structured so additional physical effects can be incorporated without 
+              changing the overall workflow. Future extensions may include <strong>Reynolds‑dependent 
+              drag behavior</strong>, <strong>spin‑rate decay</strong>, and <strong>contact dynamics</strong> to expand the 
+              range of trajectory behaviors that can be modeled.
+            </p>
+
+
+
+
 
             <!-- GitHub Button -->
             <div class="report-button-group" style="margin-top: 40px;">
@@ -93,11 +110,29 @@
 
       <!-- RIGHT COLUMN: IMAGES -->
       <div class="right-column">
-        <div class="image-section">
-          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 1">
-          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 2">
-          <img src="Screenshot 2026-07-18 222332.png" alt="Project image 3">
+      <div class="image-section">
+
+        <img src="nospin.png" alt="">
+        <div class="image-grid-caption">
+          <em>This is the no-spin condition. The ball moves in a straight line and impacts the center of the table.</em>
         </div>
+
+        <div class="image-grid2">
+          <img src="topspin.png" alt="">
+          <img src="backspin.png" alt="">
+        </div>
+
+        <div class="image-grid2">
+          <img src="sidespin.png" alt="">
+          <img src="combo.png" alt="">
+        </div>
+        <div class="image-grid-caption">
+          <em>Topspin - the ball impacts shortly past the net (top left). Backspin - the ball travels longer and impacts at the back of the table (top right).
+            Sidespin - the ball curves to the right and impacts on the right side of the table (bottom left). Combined spin (back, side)- the ball curves to the right and 
+            travels longer, impacting the back right corner of the table (bottom right).</em>
+          </em>
+        </div>
+
       </div>
 
     </div>
