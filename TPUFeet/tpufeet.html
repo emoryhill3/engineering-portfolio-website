@@ -47,9 +47,9 @@
 
           <p class="hero-description">
             As part of the Georgia Tech <strong>Propulsive Landers</strong> program, this project
-            <strong>develops TPU landing feet</strong> for the team’s <strong>70 kg self‑landing rocket</strong>
+            <strong>develops TPU landing feet</strong> for the team's <strong>70 kg self-landing rocket</strong>
             to absorb impact forces during touchdown. I led this effort alongside our
-            <strong>vice lead</strong>, focusing the team on a material‑driven shock absorber that
+            <strong>vice lead</strong>, focusing the team on a material-driven shock absorber that
             could deform predictably under load while staying lightweight and easy to
             manufacture.
             </p>
@@ -58,38 +58,38 @@
             We originally started with a simple <strong>honeycomb lattice</strong>, but the work
             quickly expanded into a broader exploration of TPU lattice families and how
             different geometries collapse under impact. The feet are sized specifically
-            for the <strong>70 kg lander configuration</strong> and mount directly to the box‑tube
-            landing legs. The final foot design is still in progress, with full‑scale
+            for the <strong>70 kg lander configuration</strong> and mount directly to the box-tube
+            landing legs. The final foot design is still in progress, with full-scale
             printing planned once testing and FEA validation are complete.
             </p>
 
             <p class="hero-description">
             To tune stiffness and collapse behavior, we iterated across <strong>six TPU lattice
             families</strong>—Squiggle, Cube, Gyroid, Inverted Hex, Control Hex, and Shaped Hex
-            (only four are pictured)—spanning <strong>0.7–1.3 mm</strong> wall thicknesses and
-            <strong>0.5–0.75 cm</strong> cell sizes. Each variation gave us a different balance of
+            (only four are pictured)—spanning <strong>0.7-1.3 mm</strong> wall thicknesses and
+            <strong>0.5-0.75 cm</strong> cell sizes. Each variation gave us a different balance of
             stiffness, collapse mode, and plateau behavior.
             </p>
 
             <p class="hero-description">
-            We printed <strong>2×2 in TPU blocks</strong> and compression‑tested them on an Instron at
+            We printed <strong>2×2 in TPU blocks</strong> and compression-tested them on an Instron at
             <strong>0.05 cm/s</strong>, stopping each test at the onset of densification to capture the
-            full plateau region. Non‑symmetric lattices were tested across all unique
+            full plateau region. Non-symmetric lattices were tested across all unique
             orientations so we could understand how directional collapse affected energy
             absorption.
             </p>
 
             <p class="hero-description">
-            I processed the force–displacement data in <strong>MATLAB</strong>, integrating the curves
+            I processed the force-displacement data in <strong>MATLAB</strong>, integrating the curves
             to compare absorbed energy. The <strong>Inverted Hex lattice</strong> consistently produced
-            the most rectangular plateau and the strongest impact‑mitigation potential,
+            the most rectangular plateau and the strongest impact-mitigation potential,
             which ultimately guided the foot geometry we moved forward with.
             </p>
 
             <p class="hero-description">
             Once we had a lattice direction, I built a shaped foot around the Inverted Hex
-            pattern and ran <strong>SolidWorks FEA</strong> using an <strong>875 N worst‑case load</strong> and
-            <strong>±15° off‑axis</strong> compression to replicate single‑leg touchdown conditions.
+            pattern and ran <strong>SolidWorks FEA</strong> using an <strong>875 N worst-case load</strong> and
+            <strong>±15° off-axis</strong> compression to replicate single-leg touchdown conditions.
             These simulations showed how the outer structure and lattice insert deform
             together under angled impacts.
             </p>
@@ -97,13 +97,13 @@
             <p class="hero-description">
             The deformation patterns from FEA helped us remove mass, refine the outer
             shell, and finalize the internal lattice insert. The updated design is printed
-            as <strong>two components</strong>—a red TPU lattice insert that slides into the outer foot
+            as <strong>two components</strong>- a red TPU lattice insert that slides into the outer foot
             structure—both of which are shown on the next slide.
             </p>
 
             <p class="hero-description">
-            We also built a <strong>PLA angled test mount</strong> with the lander’s box‑tube leg
-            geometry so we can run controlled off‑axis compression tests on the Instron.
+            I also modeled a <strong>PLA angled test mount</strong> with the lander's box-tube leg
+            geometry so we can run controlled off-axis compression tests on the Instron.
             That setup will define the next phase of validation and confirm how the foot
             behaves under real touchdown conditions.
             </p>
