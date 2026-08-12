@@ -785,96 +785,71 @@ nav a:hover::after {
    RESPONSIVE
 =========================== */
 /* ============================================================
-   MOBILE NAV + GLOBAL SCALING (Hamburger Menu)
+   MOBILE CSS — FINAL PATCH FOR EMORY'S PORTFOLIO
    ============================================================ */
 @media (max-width: 900px) {
 
   /* -------------------------
-     GLOBAL SCALE DOWN
+     NAV BAR + HAMBURGER
      ------------------------- */
-  h1, h2, h3 {
-    font-size: 85%;
+
+  /* Thicker nav bar */
+  nav {
+    padding: 18px 6%;
+    justify-content: flex-start;
   }
 
-  p, span {
-    font-size: 90%;
-  }
-
-  .hero-name {
-    font-size: 48px;
-  }
-
-  .experience-bar {
-    width: 2px;
-  }
-
-  .left-accent-bar {
-    width: 2px;
-    box-shadow:
-      0 0 18px 2px rgba(58, 123, 213, 0.7),
-      0 0 40px 3px rgba(58, 123, 213, 0.45),
-      0 0 60px 4px rgba(58, 123, 213, 0.25);
-  }
-
-
-  /* -------------------------
-     HAMBURGER BUTTON
-     ------------------------- */
+  /* Show hamburger on mobile */
   .mobile-nav-toggle {
     display: block;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 14px;
+    right: 20px;   /* hamburger on the RIGHT */
+    top: 16px;
     z-index: 6000;
   }
 
-  .hamburger {
-    width: 28px;
-    height: 3px;
-    background-color: var(--highlight);
-    display: block;
-    position: relative;
-    border-radius: 2px;
-  }
-
+  /* Hamburger icon (blue) */
+  .hamburger,
   .hamburger::before,
   .hamburger::after {
-    content: "";
     width: 28px;
     height: 3px;
     background-color: var(--highlight);
-    position: absolute;
-    left: 0;
     border-radius: 2px;
+    display: block;
+    position: relative;
   }
 
   .hamburger::before {
+    content: "";
+    position: absolute;
     top: -8px;
+    left: 0;
   }
 
   .hamburger::after {
+    content: "";
+    position: absolute;
     top: 8px;
+    left: 0;
   }
 
-
-  /* -------------------------
-     NAV — hide desktop list
-     ------------------------- */
+  /* Hide nav links until opened */
   nav ul {
-    display: none; /* hidden until toggled */
+    display: none;
     flex-direction: column;
     text-align: left;
-    padding: 12px 0;
     gap: 14px;
+    padding-top: 12px;
     width: 100%;
   }
 
-  nav {
-    padding: 12px 6%;
-    justify-content: flex-start;
+  /* When JS toggles this class */
+  nav ul.mobile-open {
+    display: flex;
   }
 
   nav a {
@@ -884,37 +859,117 @@ nav a:hover::after {
 
 
   /* -------------------------
-     NAV — dropdown menu
+     GLOW BAR (left accent)
      ------------------------- */
-  nav ul.mobile-open {
-    display: flex; /* shown when toggled */
+  .left-accent-bar {
+    width: 3px; /* slightly thicker */
+    box-shadow:
+      0 0 30px 3px rgba(58, 123, 213, 0.85),
+      0 0 70px 5px rgba(58, 123, 213, 0.55),
+      0 0 110px 7px rgba(58, 123, 213, 0.35);
   }
 
 
   /* -------------------------
-     ABOUT + SKILLS
+     HERO SECTION
      ------------------------- */
+  .hero {
+    padding: 100px 6% 40px;
+  }
+
+  .hero-name {
+    font-size: 48px;
+  }
+
+  .hero-underline {
+    height: 4px; /* unified bar thickness */
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  /* Smaller buttons */
+  .button-primary,
+  .button-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+
+  /* -------------------------
+     GPA BLOCK
+     ------------------------- */
+  .gpa-block {
+    gap: 10px;
+  }
+
+  .gpa-bar {
+    width: 4px; /* unified bar thickness */
+  }
+
+  .gpa-text {
+    font-size: 32px; /* smaller than titles */
+  }
+
+  .gpa-highlight {
+    font-size: 32px; /* same size as white */
+  }
+
+  .gpa-label {
+    font-size: 14px;
+  }
+
+
+  /* -------------------------
+     ABOUT ME — SKILLS SECTION
+     ------------------------- */
+
+  /* Outer skill boxes stacked vertically */
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
+  /* Skill boxes smaller */
+  .skill-box {
+    padding: 14px;
+  }
+
+  /* Inner mini skill boxes arranged horizontally */
   .skill-items {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-items span {
+    font-size: 14px;
+    padding: 4px 6px;
   }
 
 
   /* -------------------------
-     EXPERIENCE — keep timeline
+     EXPERIENCE SECTION
      ------------------------- */
   .experience-inner {
     margin-left: 20px;
   }
 
+  .experience-title {
+    font-size: 32px;
+    margin-left: 0;
+  }
+
+  /* Bar stops right above first diamond */
   .experience-bar {
     display: block;
     left: -20px;
-    top: 70px;
-    height: calc(100% - 70px);
+    top: 40px; /* lowered */
+    height: calc(100% - 40px);
+    width: 3px; /* unified thickness */
   }
 
   .experience-item::before {
@@ -924,39 +979,75 @@ nav a:hover::after {
     height: 7px;
   }
 
+  .experience-role {
+    font-size: 18px;
+  }
+
+  .experience-description {
+    font-size: 16px;
+  }
+
 
   /* -------------------------
-     PROJECTS — fix left padding
+     PROJECTS SECTION
      ------------------------- */
-  .projects-title,
-  .projects-tabs,
-  .projects-grid {
-    margin-left: 0 !important;
-    padding-left: 6%;
-    padding-right: 6%;
+  .projects-title {
+    font-size: 32px;
+  }
+
+  .projects-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tab-button {
+    font-size: 16px;
+    padding: 4px 12px;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card p {
+    font-size: 16px;
   }
 
 
   /* -------------------------
-     CONTACT — fix left padding
+     CONTACT SECTION
      ------------------------- */
   .contact-title {
-    margin-left: 0;
-    padding-left: 6%;
+    font-size: 32px;
   }
 
+  /* Vertical arrangement */
   .contact-content {
     flex-direction: column;
-    padding-left: 6%;
-    padding-right: 6%;
+    gap: 20px;
   }
 
+  /* Equal width, shorter boxes */
   .contact-box {
     max-width: 420px;
     margin: 0 auto;
+    padding: 12px 14px;
+  }
+
+  .contact-label {
+    font-size: 14px;
+  }
+
+  .contact-value {
+    font-size: 16px;
   }
 }
