@@ -790,6 +790,9 @@ nav a:hover::after {
 /* ============================================================
    MOBILE CSS — FINAL CONSOLIDATED PATCH (FULL BLOCK)
    ============================================================ */
+/* ============================================================
+   MOBILE CSS — FULL WORKING VERSION
+   ============================================================ */
 @media (max-width: 900px) {
 
   /* -------------------------
@@ -954,18 +957,18 @@ nav a:hover::after {
     margin-bottom: 10px;
   }
 
-  /* ⭐ MINI SKILL TAGS — horizontal rows (FIXED) */
+  /* ⭐ MINI SKILL TAGS — horizontal rows */
   .skill-items {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 6px;
-    justify-content: flex-start;
+    gap: 6px !important;
+    justify-content: flex-start !important;
   }
 
   .skill-items span {
-    font-size: 13px;
-    padding: 4px 6px;
-    white-space: nowrap;
+    font-size: 13px !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
   }
 
 
@@ -977,10 +980,10 @@ nav a:hover::after {
     margin-left: 20px;
   }
 
-  /* ⭐ EXPERIENCE TITLE — align with bar */
+  /* ⭐ EXPERIENCE TITLE — align with vertical bar */
   .experience-title {
     font-size: 32px;
-    margin-left: -40px; /* ← THIS is the line you tune */
+    margin-left: -50px !important; /* ← tune this value */
   }
 
   .experience-bar {
@@ -1049,23 +1052,33 @@ nav a:hover::after {
     font-size: 32px;
   }
 
+  /* keep two columns */
   .contact-content {
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  /* ⭐ CONTACT BOXES — full width inside each column */
-  .contact-box {
+  .contact-left,
+  .contact-right {
     width: 100%;
-    padding: 10px 12px; /* smaller padding */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .contact-value {
-    white-space: normal;
-    font-size: 15px; /* smaller text */
+  /* ⭐ CONTACT BOXES — full width inside each column */
+  .contact-box {
+    width: 100% !important;
+    padding: 10px 12px !important;
   }
 
   .contact-label {
-    font-size: 13px; /* smaller text */
+    font-size: 13px !important;
+  }
+
+  .contact-value {
+    font-size: 15px !important;
+    white-space: normal !important;
   }
 }
