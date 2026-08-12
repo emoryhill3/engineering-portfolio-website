@@ -820,7 +820,7 @@ nav a:hover::after {
   .hamburger::after {
     width: 24px;        /* was 28px */
     height: 2.5px;      /* was 3px */
-    background-color: var(--white);
+    background-color: var(--highlight);
     border-radius: 2px;
     display: block;
     position: relative;
@@ -971,8 +971,8 @@ nav a:hover::after {
   /* Bar stops right above first diamond */
   .experience-bar {
     display: block;
-    left: -20px;
-    top: 40px; /* lowered */
+    left: -20.5px;
+    top: 80px; /* lowered */
     height: calc(100% - 40px);
     width: 3px; /* unified thinner bar */
   }
@@ -1001,7 +1001,7 @@ nav a:hover::after {
   .projects-title,
   .projects-tabs,
   .projects-grid {
-    margin-left: 0 !important;
+    margin-left: -10px !important;
     padding-left: 6%;
     padding-right: 6%;
   }
@@ -1062,9 +1062,9 @@ nav a:hover::after {
 
   /* Full width, equal height, smaller top padding */
   .contact-box {
-    width: 100%;
+    width: 200%;
     margin: 0 auto;
-    padding: 10px 14px; /* reduced top padding */
+    padding: 10px 10px; /* reduced top padding */
   }
 
   /* Wrap all values consistently */
