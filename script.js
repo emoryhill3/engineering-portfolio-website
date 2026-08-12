@@ -24,3 +24,10 @@ tabs.forEach(tab => {
 
   });
 });
+
+const mobileToggle = document.querySelector('.mobile-nav-toggle');
+const navList = document.querySelector('nav ul');
+
+mobileToggle.addEventListener('click', () => {
+  navList.classList.toggle('mobile-open');
+});
