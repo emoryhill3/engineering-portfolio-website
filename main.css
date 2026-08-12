@@ -983,7 +983,7 @@ nav a:hover::after {
   /* ⭐ EXPERIENCE TITLE — align with vertical bar */
   .experience-title {
     font-size: 32px;
-    margin-left: -80px !important; /* ← tune this value */
+    margin-left: -30px !important; /* ← tune this value */
   }
 
   .experience-bar {
