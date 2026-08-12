@@ -855,11 +855,23 @@ nav a:hover::after {
     padding: 6px 0;
   }
 
+    /* -------------------------
+     GLOW BAR (left accent)
+     ------------------------- */
+  .left-accent-bar {
+    width: 3px; /* slightly thicker */
+    box-shadow:
+      0 0 30px 3px rgba(58, 123, 213, 0.85),
+      0 0 70px 5px rgba(58, 123, 213, 0.55),
+      0 0 110px 7px rgba(58, 123, 213, 0.35);
+  }
 
   /* -------------------------
      HERO
      ------------------------- */
-
+  /* -------------------------
+     HERO SECTION
+     ------------------------- */
   .hero {
     padding: 100px 6% 40px;
   }
@@ -869,40 +881,46 @@ nav a:hover::after {
   }
 
   .hero-underline {
-    height: 3px;
+    height: 3px; /* unified thinner bar */
   }
 
   .hero-description {
     font-size: 18px;
+    max-width: 100%;
   }
 
+  /* Smaller buttons */
   .button-primary,
   .button-secondary {
     padding: 10px 20px;
     font-size: 16px;
   }
 
-
   /* -------------------------
      GPA
      ------------------------- */
+  /* -------------------------
+     GPA BLOCK
+     ------------------------- */
+  .gpa-block {
+    gap: 10px;
+  }
 
   .gpa-bar {
-    width: 3px;
+    width: 3px; /* unified thinner bar */
   }
 
   .gpa-text {
-    font-size: 32px;
+    font-size: 32px; /* smaller than titles */
   }
 
   .gpa-highlight {
-    font-size: 32px;
+    font-size: 32px; /* same size as white */
   }
 
   .gpa-label {
     font-size: 14px;
   }
-
 
   /* -------------------------
      ABOUT ME
@@ -930,7 +948,7 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   /* Skill box titles smaller */
@@ -941,9 +959,12 @@ nav a:hover::after {
 
   /* Mini skill tags horizontal */
   .skill-items {
-    display: flex;
+    display: flex !important;        /* override desktop grid */
     flex-wrap: wrap;
     gap: 6px;
+    row-gap: 6px;
+    column-gap: 6px;
+    justify-content: flex-start;
   }
 
   .skill-items span {
@@ -957,20 +978,29 @@ nav a:hover::after {
      EXPERIENCE
      ------------------------- */
 
+  .experience-inner {
+    margin-left: 20px;
+  }
+
   .experience-title {
     font-size: 32px;
     margin-left: 0;
   }
 
-  .experience-inner {
-    margin-left: 20px;
+  /* Bar stops right above first diamond */
+  .experience-bar {
+    display: block;
+    left: -19px;
+    top: 80px; /* lowered */
+    height: calc(100% - 40px);
+    width: 3px; /* unified thinner bar */
   }
 
-  .experience-bar {
-    left: -19px;
-    top: 80px;
-    width: 3px;
-    height: calc(100% - 40px);
+  .experience-item::before {
+    display: block;
+    left: -23px;
+    width: 7px;
+    height: 7px;
   }
 
   .experience-role {
@@ -980,6 +1010,7 @@ nav a:hover::after {
   .experience-description {
     font-size: 16px;
   }
+
 
 
   /* -------------------------
