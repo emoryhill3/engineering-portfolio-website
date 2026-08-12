@@ -785,7 +785,7 @@ nav a:hover::after {
    RESPONSIVE
 =========================== */
 /* ============================================================
-   MOBILE CSS — FINAL PATCH FOR EMORY'S PORTFOLIO
+   MOBILE CSS — FINAL CONSOLIDATED PATCH
    ============================================================ */
 @media (max-width: 900px) {
 
@@ -795,11 +795,11 @@ nav a:hover::after {
 
   /* Thicker nav bar */
   nav {
-    padding: 18px 6%;
+    padding: 22px 6%;
     justify-content: flex-start;
   }
 
-  /* Show hamburger on mobile */
+  /* Hamburger visible on mobile */
   .mobile-nav-toggle {
     display: block;
     background: none;
@@ -811,12 +811,12 @@ nav a:hover::after {
     z-index: 6000;
   }
 
-  /* Hamburger icon (blue) */
+  /* Hamburger slightly smaller */
   .hamburger,
   .hamburger::before,
   .hamburger::after {
-    width: 28px;
-    height: 3px;
+    width: 24px;        /* was 28px */
+    height: 2.5px;      /* was 3px */
     background-color: var(--highlight);
     border-radius: 2px;
     display: block;
@@ -826,14 +826,14 @@ nav a:hover::after {
   .hamburger::before {
     content: "";
     position: absolute;
-    top: -8px;
+    top: -7px;
     left: 0;
   }
 
   .hamburger::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 0;
   }
 
@@ -882,7 +882,7 @@ nav a:hover::after {
   }
 
   .hero-underline {
-    height: 4px; /* unified bar thickness */
+    height: 3px; /* unified thinner bar */
   }
 
   .hero-description {
@@ -906,7 +906,7 @@ nav a:hover::after {
   }
 
   .gpa-bar {
-    width: 4px; /* unified bar thickness */
+    width: 3px; /* unified thinner bar */
   }
 
   .gpa-text {
@@ -930,7 +930,8 @@ nav a:hover::after {
   .skills-grid {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+    margin-top: 20px; /* ensures they start BELOW the paragraph */
   }
 
   /* Skill boxes smaller */
@@ -938,16 +939,17 @@ nav a:hover::after {
     padding: 14px;
   }
 
-  /* Inner mini skill boxes arranged horizontally */
+  /* Mini skill tags horizontal */
   .skill-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
 
   .skill-items span {
-    font-size: 14px;
+    font-size: 13px;
     padding: 4px 6px;
+    white-space: nowrap; /* keeps them horizontal */
   }
 
 
@@ -969,7 +971,7 @@ nav a:hover::after {
     left: -20px;
     top: 40px; /* lowered */
     height: calc(100% - 40px);
-    width: 3px; /* unified thickness */
+    width: 3px; /* unified thinner bar */
   }
 
   .experience-item::before {
@@ -991,6 +993,16 @@ nav a:hover::after {
   /* -------------------------
      PROJECTS SECTION
      ------------------------- */
+
+  /* Fix left shift */
+  .projects-title,
+  .projects-tabs,
+  .projects-grid {
+    margin-left: 0 !important;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
   .projects-title {
     font-size: 32px;
   }
@@ -1026,6 +1038,15 @@ nav a:hover::after {
   /* -------------------------
      CONTACT SECTION
      ------------------------- */
+
+  /* Fix left shift */
+  .contact-title,
+  .contact-content {
+    margin-left: 0 !important;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
   .contact-title {
     font-size: 32px;
   }
@@ -1036,18 +1057,20 @@ nav a:hover::after {
     gap: 20px;
   }
 
-  /* Equal width, shorter boxes */
+  /* Full width, equal height, smaller top padding */
   .contact-box {
-    max-width: 420px;
+    width: 100%;
     margin: 0 auto;
-    padding: 12px 14px;
+    padding: 10px 14px; /* reduced top padding */
+  }
+
+  /* Wrap all values consistently */
+  .contact-value {
+    white-space: normal;
+    font-size: 16px;
   }
 
   .contact-label {
     font-size: 14px;
-  }
-
-  .contact-value {
-    font-size: 16px;
   }
 }
