@@ -787,6 +787,9 @@ nav a:hover::after {
 /* ============================================================
    MOBILE CSS — FINAL CONSOLIDATED PATCH
    ============================================================ */
+/* ============================================================
+   MOBILE CSS — FINAL CONSOLIDATED PATCH
+   ============================================================ */
 @media (max-width: 900px) {
 
   /* -------------------------
@@ -817,7 +820,7 @@ nav a:hover::after {
   .hamburger::after {
     width: 24px;        /* was 28px */
     height: 2.5px;      /* was 3px */
-    background-color: var(--highlight);
+    background-color: var(--white);
     border-radius: 2px;
     display: block;
     position: relative;
