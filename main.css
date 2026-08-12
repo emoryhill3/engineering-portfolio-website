@@ -860,7 +860,7 @@ nav a:hover::after {
      GLOW BAR (left accent)
      ------------------------- */
   .left-accent-bar {
-    width: 2px; /* thinner */
+    width: 2px;
     box-shadow:
       0 0 18px 2px rgba(58, 123, 213, 0.55),
       0 0 40px 3px rgba(58, 123, 213, 0.35),
@@ -907,7 +907,7 @@ nav a:hover::after {
   }
 
   .gpa-text-wrapper {
-    margin-left: -6px; /* scoot left */
+    margin-left: -6px;
   }
 
   .gpa-text {
@@ -954,13 +954,11 @@ nav a:hover::after {
     margin-bottom: 10px;
   }
 
-  /* MINI SKILL TAGS — horizontal rows */
+  /* ⭐ MINI SKILL TAGS — horizontal rows (FIXED) */
   .skill-items {
     display: flex !important;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     gap: 6px;
-    row-gap: 6px;
-    column-gap: 6px;
     justify-content: flex-start;
   }
 
@@ -979,9 +977,10 @@ nav a:hover::after {
     margin-left: 20px;
   }
 
+  /* ⭐ EXPERIENCE TITLE — align with bar */
   .experience-title {
     font-size: 32px;
-    margin-left: -10px; /* moved left */
+    margin-left: -40px; /* ← THIS is the line you tune */
   }
 
   .experience-bar {
@@ -1055,21 +1054,18 @@ nav a:hover::after {
     gap: 20px;
   }
 
-  /* FULL-WIDTH CONTACT BOXES */
+  /* ⭐ CONTACT BOXES — full width inside each column */
   .contact-box {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 10px 12px; /* smaller padding */
   }
 
   .contact-value {
     white-space: normal;
-    font-size: 16px;
+    font-size: 15px; /* smaller text */
   }
 
   .contact-label {
-    font-size: 14px;
+    font-size: 13px; /* smaller text */
   }
 }
