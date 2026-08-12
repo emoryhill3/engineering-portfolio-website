@@ -796,30 +796,27 @@ nav a:hover::after {
      NAV BAR + HAMBURGER
      ------------------------- */
 
-  /* Thicker nav bar */
   nav {
     padding: 22px 6%;
     justify-content: flex-start;
   }
 
-  /* Hamburger visible on mobile */
   .mobile-nav-toggle {
     display: block;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 20px;   /* hamburger on the RIGHT */
+    right: 20px;
     top: 16px;
     z-index: 6000;
   }
 
-  /* Hamburger slightly smaller */
   .hamburger,
   .hamburger::before,
   .hamburger::after {
-    width: 24px;        /* was 28px */
-    height: 2.5px;      /* was 3px */
+    width: 24px;
+    height: 2.5px;
     background-color: var(--highlight);
     border-radius: 2px;
     display: block;
@@ -840,7 +837,6 @@ nav a:hover::after {
     left: 0;
   }
 
-  /* Hide nav links until opened */
   nav ul {
     display: none;
     flex-direction: column;
@@ -850,7 +846,6 @@ nav a:hover::after {
     width: 100%;
   }
 
-  /* When JS toggles this class */
   nav ul.mobile-open {
     display: flex;
   }
@@ -862,20 +857,9 @@ nav a:hover::after {
 
 
   /* -------------------------
-     GLOW BAR (left accent)
+     HERO
      ------------------------- */
-  .left-accent-bar {
-    width: 3px; /* slightly thicker */
-    box-shadow:
-      0 0 30px 3px rgba(58, 123, 213, 0.85),
-      0 0 70px 5px rgba(58, 123, 213, 0.55),
-      0 0 110px 7px rgba(58, 123, 213, 0.35);
-  }
 
-
-  /* -------------------------
-     HERO SECTION
-     ------------------------- */
   .hero {
     padding: 100px 6% 40px;
   }
@@ -885,15 +869,13 @@ nav a:hover::after {
   }
 
   .hero-underline {
-    height: 3px; /* unified thinner bar */
+    height: 3px;
   }
 
   .hero-description {
     font-size: 18px;
-    max-width: 100%;
   }
 
-  /* Smaller buttons */
   .button-primary,
   .button-secondary {
     padding: 10px 20px;
@@ -902,22 +884,19 @@ nav a:hover::after {
 
 
   /* -------------------------
-     GPA BLOCK
+     GPA
      ------------------------- */
-  .gpa-block {
-    gap: 10px;
-  }
 
   .gpa-bar {
-    width: 3px; /* unified thinner bar */
+    width: 3px;
   }
 
   .gpa-text {
-    font-size: 32px; /* smaller than titles */
+    font-size: 32px;
   }
 
   .gpa-highlight {
-    font-size: 32px; /* same size as white */
+    font-size: 32px;
   }
 
   .gpa-label {
@@ -926,20 +905,38 @@ nav a:hover::after {
 
 
   /* -------------------------
-     ABOUT ME — SKILLS SECTION
+     ABOUT ME
      ------------------------- */
 
-  /* Outer skill boxes stacked vertically */
+  /* Title stays on one line */
+  .about-title {
+    font-size: 36px;
+    white-space: nowrap;
+  }
+
+  /* Body text smaller */
+  .about-body p {
+    font-size: 18px;
+  }
+
+  /* Skills BELOW the paragraph */
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .skills-grid {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 20px; /* ensures they start BELOW the paragraph */
+    margin-top: 20px;
   }
 
-  /* Skill boxes smaller */
-  .skill-box {
-    padding: 14px;
+  /* Skill box titles smaller */
+  .skill-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   /* Mini skill tags horizontal */
@@ -952,36 +949,28 @@ nav a:hover::after {
   .skill-items span {
     font-size: 13px;
     padding: 4px 6px;
-    white-space: nowrap; /* keeps them horizontal */
+    white-space: nowrap;
   }
 
 
   /* -------------------------
-     EXPERIENCE SECTION
+     EXPERIENCE
      ------------------------- */
-  .experience-inner {
-    margin-left: 20px;
-  }
 
   .experience-title {
     font-size: 32px;
     margin-left: 0;
   }
 
-  /* Bar stops right above first diamond */
-  .experience-bar {
-    display: block;
-    left: -20.5px;
-    top: 80px; /* lowered */
-    height: calc(100% - 40px);
-    width: 3px; /* unified thinner bar */
+  .experience-inner {
+    margin-left: 20px;
   }
 
-  .experience-item::before {
-    display: block;
-    left: -23px;
-    width: 7px;
-    height: 7px;
+  .experience-bar {
+    left: -19px;
+    top: 80px;
+    width: 3px;
+    height: calc(100% - 40px);
   }
 
   .experience-role {
@@ -994,25 +983,19 @@ nav a:hover::after {
 
 
   /* -------------------------
-     PROJECTS SECTION
+     PROJECTS
      ------------------------- */
 
-  /* Fix left shift */
   .projects-title,
   .projects-tabs,
   .projects-grid {
-    margin-left: -10px !important;
+    margin-left: 0 !important;
     padding-left: 6%;
     padding-right: 6%;
   }
 
   .projects-title {
     font-size: 32px;
-  }
-
-  .projects-tabs {
-    flex-wrap: wrap;
-    gap: 8px;
   }
 
   .tab-button {
@@ -1025,24 +1008,11 @@ nav a:hover::after {
     gap: 22px;
   }
 
-  .project-card {
-    padding: 18px;
-  }
-
-  .project-card h3 {
-    font-size: 18px;
-  }
-
-  .project-card p {
-    font-size: 16px;
-  }
-
 
   /* -------------------------
-     CONTACT SECTION
+     CONTACT
      ------------------------- */
 
-  /* Fix left shift */
   .contact-title,
   .contact-content {
     margin-left: 0 !important;
@@ -1054,20 +1024,18 @@ nav a:hover::after {
     font-size: 32px;
   }
 
-  /* Vertical arrangement */
   .contact-content {
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Full width, equal height, smaller top padding */
+  /* FIX: remove 200% width */
   .contact-box {
-    width: 200%;
+    width: 100%;
     margin: 0 auto;
-    padding: 10px 10px; /* reduced top padding */
+    padding: 10px 10px;
   }
 
-  /* Wrap all values consistently */
   .contact-value {
     white-space: normal;
     font-size: 16px;
