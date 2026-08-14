@@ -988,9 +988,9 @@ nav a:hover::after {
 
   .experience-bar {
     display: block;
-    left: -20px;
-    top: 120px;
-    height: calc(100% - 90px);
+    left: -21px;
+    top: 95px;
+    height: calc(100% - 65px);
     width: 3px;
   }
 
