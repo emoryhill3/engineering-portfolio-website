@@ -891,7 +891,7 @@ nav a:hover::after {
      HERO SECTION
      ------------------------- */
   .hero {
-    padding: 100px 6% 40px;
+    padding: 80px 6% 30px !important;;
   }
 
   .hero-name {
@@ -958,6 +958,7 @@ nav a:hover::after {
   .about-section {
     flex-direction: column;
     align-items: flex-start;
+    padding: 50px 6% 50px !important;
   }
 
   .skills-grid {
@@ -993,6 +994,10 @@ nav a:hover::after {
   /* -------------------------
      EXPERIENCE
      ------------------------- */
+  /* EXPERIENCE */
+  .experience-section {
+    padding: 50px 6% 50px !important;
+  }
 
   .experience-inner {
     margin-left: 20px;
@@ -1031,7 +1036,10 @@ nav a:hover::after {
   /* -------------------------
      PROJECTS
      ------------------------- */
-
+  .projects-section {
+    padding: 50px 0 50px !important;
+  }
+  
   .projects-title,
   .projects-tabs,
   .projects-grid {
@@ -1058,6 +1066,9 @@ nav a:hover::after {
   /* -------------------------
      CONTACT
      ------------------------- */
+  .contact-section {
+    padding: 50px 0 !important;
+  }
 
   .contact-title,
   .contact-content {
