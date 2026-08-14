@@ -811,11 +811,11 @@ nav a:hover::after {
   border: none;
   cursor: pointer;
 
-  position: absolute;              /* pin it, don't let flex move it */
-  right: 6%;                       /* align with nav horizontal padding */
-  top: 50%;                        /* vertically center in the nav */
-  transform: translateY(-50%);
-  margin-left: 0;                  /* no flex-based pushing needed */
+  position: absolute;              /* pin it so it never moves */
+  right: 6%;                       /* align with nav padding */
+  top: 22px;                       /* stays at the top ALWAYS */
+  transform: none;                 /* remove vertical centering */
+  margin-left: 0;
 }
 
 .hamburger,
@@ -866,6 +866,8 @@ nav a {
   font-size: 18px;
   padding: 6px 0;
 }
+
+
 
   /* -------------------------
      GLOW BAR (left accent)
