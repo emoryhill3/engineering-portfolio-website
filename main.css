@@ -801,10 +801,8 @@ nav a:hover::after {
 
   nav {
   padding: 22px 6%;
-  display: flex;
-  flex-direction: row !important;   /* keep hamburger + logo in one row */
-  align-items: center;
   justify-content: flex-start;
+  position: relative;              /* anchor for the absolute hamburger */
 }
 
 .mobile-nav-toggle {
@@ -812,9 +810,12 @@ nav a:hover::after {
   background: none;
   border: none;
   cursor: pointer;
-  position: static;
-  margin-left: auto;                /* stays on the right */
-  flex-shrink: 0;                   /* prevents shifting */
+
+  position: absolute;              /* pin it, don't let flex move it */
+  right: 6%;                       /* align with nav horizontal padding */
+  top: 50%;                        /* vertically center in the nav */
+  transform: translateY(-50%);
+  margin-left: 0;                  /* no flex-based pushing needed */
 }
 
 .hamburger,
@@ -827,10 +828,12 @@ nav a:hover::after {
   display: block;
 }
 
+/* anchor the middle bar */
 .hamburger {
-  position: relative;               /* anchor middle bar */
+  position: relative;
 }
 
+/* top and bottom bars */
 .hamburger::before,
 .hamburger::after {
   content: "";
@@ -839,11 +842,11 @@ nav a:hover::after {
 }
 
 .hamburger::before {
-  top: -7px;                        /* top bar */
+  top: -7px;  /* top bar */
 }
 
 .hamburger::after {
-  top: 7px;                         /* bottom bar */
+  top: 7px;   /* bottom bar */
 }
 
 nav ul {
@@ -863,8 +866,6 @@ nav a {
   font-size: 18px;
   padding: 6px 0;
 }
-
-
 
   /* -------------------------
      GLOW BAR (left accent)
