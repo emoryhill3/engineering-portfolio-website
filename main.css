@@ -800,29 +800,21 @@ nav a:hover::after {
      ------------------------- */
 
   nav {
-    padding: 22px 6%;
-    justify-content: flex-start;
-  }
-
-  .mobile-nav-toggle {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  /* let it participate in flex layout instead of absolute positioning */
-  position: static;
-  margin-left: auto;  /* pushes it to the right */
+  padding: 22px 6%;
+  display: flex;
+  flex-direction: row !important;   /* keep hamburger + logo in one row */
+  align-items: center;
+  justify-content: flex-start;
 }
 
-
-  .mobile-nav-toggle {
+.mobile-nav-toggle {
   display: block;
   background: none;
   border: none;
   cursor: pointer;
   position: static;
-  margin-left: auto;  /* pushes it to the right */
+  margin-left: auto;                /* stays on the right */
+  flex-shrink: 0;                   /* prevents shifting */
 }
 
 .hamburger,
@@ -835,12 +827,10 @@ nav a:hover::after {
   display: block;
 }
 
-/* anchor the middle bar */
 .hamburger {
-  position: relative;
+  position: relative;               /* anchor middle bar */
 }
 
-/* top and bottom bars */
 .hamburger::before,
 .hamburger::after {
   content: "";
@@ -849,30 +839,31 @@ nav a:hover::after {
 }
 
 .hamburger::before {
-  top: -7px;  /* top bar */
+  top: -7px;                        /* top bar */
 }
 
 .hamburger::after {
-  top: 7px;   /* bottom bar */
+  top: 7px;                         /* bottom bar */
 }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    text-align: left;
-    gap: 14px;
-    padding-top: 12px;
-    width: 100%;
-  }
+nav ul {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  gap: 14px;
+  padding-top: 12px;
+  width: 100%;
+}
 
-  nav ul.mobile-open {
-    display: flex;
-  }
+nav ul.mobile-open {
+  display: flex;
+}
 
-  nav a {
-    font-size: 18px;
-    padding: 6px 0;
-  }
+nav a {
+  font-size: 18px;
+  padding: 6px 0;
+}
+
 
 
   /* -------------------------
