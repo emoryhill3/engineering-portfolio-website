@@ -816,31 +816,45 @@ nav a:hover::after {
 }
 
 
-  .hamburger,
-  .hamburger::before,
-  .hamburger::after {
-    width: 24px;
-    height: 2.5px;
-    background-color: var(--highlight);
-    border-radius: 2px;
-    display: block;
-    position: relative;
-  }
+  .mobile-nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: static;
+  margin-left: auto;  /* pushes it to the right */
+}
 
-  .hamburger::before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 0;
-  }
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--highlight);
+  border-radius: 2px;
+  display: block;
+}
 
-  .hamburger::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 0;
-  }
+/* anchor the middle bar */
+.hamburger {
+  position: relative;
+}
 
+/* top and bottom bars */
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -7px;  /* top bar */
+}
+
+.hamburger::after {
+  top: 7px;   /* bottom bar */
+}
 
   nav ul {
     display: none;
