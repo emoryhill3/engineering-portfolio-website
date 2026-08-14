@@ -800,10 +800,13 @@ nav a:hover::after {
      ------------------------- */
 
   nav {
-  padding: 22px 6%;
+  display: flex;               /* RESTORED — required */
+  align-items: center;         /* RESTORED — keeps hamburger vertically aligned */
   justify-content: flex-start;
-  position: relative;              /* anchor for the absolute hamburger */
+  padding: 22px 6%;
+  position: relative;          /* anchor for hamburger */
 }
+
 
 .mobile-nav-toggle {
   display: block;
