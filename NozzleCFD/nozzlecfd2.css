@@ -192,6 +192,79 @@
 
 @media (max-width: 900px) {
 
+
+  nav {
+  display: flex;               /* RESTORED — required */
+  align-items: center;         /* RESTORED — keeps hamburger vertically aligned */
+  justify-content: flex-start;
+  padding: 22px 6%;
+  position: relative;          /* anchor for hamburger */
+}
+
+
+.mobile-nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;              /* pin it so it never moves */
+  right: 6%;                       /* align with nav padding */
+  top: 22px;                       /* stays at the top ALWAYS */
+  transform: none;                 /* remove vertical centering */
+  margin-left: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--highlight);
+  border-radius: 2px;
+  display: block;
+}
+
+/* anchor the middle bar */
+.hamburger {
+  position: relative;
+}
+
+/* top and bottom bars */
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -7px;  /* top bar */
+}
+
+.hamburger::after {
+  top: 7px;   /* bottom bar */
+}
+
+nav ul {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  gap: 14px;
+  padding-top: 12px;
+  width: 100%;
+}
+
+nav ul.mobile-open {
+  display: flex;
+}
+
+nav a {
+  font-size: 18px;
+  padding: 6px 0;
+}
+
+
   .project-title {
     font-size: 36px;
   }
