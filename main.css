@@ -829,7 +829,7 @@ nav a:hover::after {
   .hamburger::before {
     content: "";
     position: absolute;
-    top: -7px;
+    top: 7px;
     left: 0;
   }
 
